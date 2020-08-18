@@ -4,7 +4,7 @@ local videtext = text:match("^/dls (.*)$")
 st = https.request('https://forhassan.ml/my_ip/story.php?username='..URL.escape(videotext)..'')
 st = JSON.decode(st)
 local video = st.info.video
-send(msg.chat_id_, msg.id_, video)
+sendVideo(msg.chat_id_, msg.id_, video)
 end
 end
 return {Casper = Food}
